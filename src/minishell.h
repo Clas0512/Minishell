@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   minishell.h                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: mkaragoz <mkaragoz@student.42istanbul.c    +#+  +:+       +#+        */
+/*   By: anargul <anargul@student.42istanbul.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/06/08 11:02:54 by mkaragoz          #+#    #+#             */
-/*   Updated: 2023/09/03 06:23:36 by mkaragoz         ###   ########.fr       */
+/*   Updated: 2023/09/03 11:06:24 by anargul          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -39,6 +39,7 @@ typedef struct s_tools
 {
 	int	quote_mode;
 	bool arg_mode;
+	bool double_redirection;
 } t_tools;
 
 struct s_vars
@@ -77,5 +78,5 @@ int		ms_set_path(char **env);
 char	*ms_test_path(char *cmd);
 void	ms_free_tokens(void);
 void	ms_init_tools(void);
-void ms_set_arg_false();
+void	ms_set_arg_false(int i);
 #endif
